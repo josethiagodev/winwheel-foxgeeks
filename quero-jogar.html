@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOXGEEKS</title>
+
+    <!-- FONT AWESOME 5.10 -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Script File > Winwheel.JS -->
+    <script type="text/javascript" src="js/winwheel.js"></script>
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script> -->
+    <script src="js/TweenMax.min.js"></script>
+
+</head>
+<body>
+
+    <!-- HEADER FIXED > INICIO -->
+    <span class="menu-main" id="btnMenuMain"></span>
+    <header class="header-foxgeek">
+        <div class="container-foxgeek">
+            <div class="column-discount">
+                <p class="txt-discount">Você conseguiu até agora:</p>
+                <div class="image-discount">
+                    <div class="center-discount">
+                        <img class="icone-desconto" src="img/icone-desconto.png" alt="">
+                        <span class="value-discount">0% de desconto</span>
+                    </div> 
+                </div>
+            </div>
+            <span class="menu-sair"><a href="index.html"><img src="img/icone-sair.png" alt="Sair do FoxGaming"></a></span>
+        </div>
+    </header>
+    <!-- HEADER FIXED > FIM -->
+
+    
+    <!-- PAGE CONTENT > INICIO -->
+    
+    <section class="page-content margin-size">
+        <article class="column-left">
+            <span class="arrow-foxgeeks"><img src="img/arrow-foxgeeks.png" alt=""></span>
+            <div class="bg-roullete">
+                <canvas id="winWheelFoxGeeks" width='355' height='355'
+                    data-responsiveMinWidth="180"
+                    data-responsiveScaleHeight="true"
+                    data-responsiveMargin="40">
+                </canvas>
+            </div>
+        </article>
+        <article class="column-right">
+            <button type="button" class="btn-start" id="spin_start" onClick="startSpin();">Começar jogo</button>
+        </article>
+    </section>
+    <!-- PAGE CONTENT > FIM -->
+
+
+    <!-- MENU MAIN > INICIO -->
+    <aside class="open-menu-main" id="openMenuMain">
+        <div class="overlay-menu-main" id="btnOverlayMenuMain"></div>
+        <nav class="navbar-menu-main" id="showMenuMain">
+            <ul class="list-menu">
+                <li><a href="#"><i class="fas fa-info-circle"></i>Como funciona?</a></li>
+                <li><a href="#"><i class="fas fa-poll"></i>Meus resultados</a></li>
+                <li><a href="#"><i class="fas fa-gamepad"></i>Ranking FoxGaming</a></li>
+                <li><a href="#"><i class="fas fa-user-plus"></i>Convidar meus amigos</a></li>
+                <li><a href="index.html"><i class="fas fa-power-off"></i>Sair agora do jogo</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <!-- MENU MAIN > FIM -->
+
+
+    <!-- FILE JS > Menu Main + WinWheel -->
+    <script src="js/foxgaming.js"></script>
+
+
+</body>
+</html>

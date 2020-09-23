@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOXGEEKS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <article class="btn-centralized-register">
+        <button type="button" class="btn-modal-register" id="btnModalRegister" onclick="modalRegister('openModalRegister')">Abrir Modal</button>
+    </article>
+    
+    <div class="modal-foxgeek-register" id="openModalRegister">
+        <div class="modal-centralized-overlay" id="closeOverlayModalRegister"></div>
+        <div class="modal-container-foxgeek">
+            <div class="modal-header">
+                <h1 class="header-title">Já imaginou comprar os<br> <strong>melhores jogos</strong> para seu <strong>console</strong>?</h1>
+                <button class="btn-close-modal" id="closeModalRegister"><img src="img/close-modal-register.png" alt=""></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <p>Cadastre-se agora e comece a <strong>ganhar prêmios</strong>!</p>
+                    <form action="">
+                        <input type="email" class="form-control" placeholder="Digite seu melhor e-mail" required>
+                        <button class="btn-register">Quero jogar</button>
+                    </form>
+                </div>
+                <div class="about-foxgaming">
+                    <p>Com o nosso <strong>FoxGaming</strong> você pode:</p>
+                    <div class="column-03">
+                        <img src="img/icone-device-foxgeeks.png" alt="Jogar quando e onde quiser por um dispositivo móvel, tablet ou celular">
+                        <p>Jogar quando e onde quiser por um <strong>dispositivo móvel</strong>, <strong>tablet</strong> ou <strong>celular</strong></p>
+                    </div>
+                    <div class="column-03">
+                        <img src="img/icone-cupons-desconto-foxgeeks.png" alt="Ser premiado com vários cupons de até 15% de desconto nos jogos">
+                        <p>Ser premiado com vários cupons de até <strong>15% de desconto</strong> nos jogos</p>
+                    </div>
+                    <div class="column-03">
+                        <img src="img/icone-jogos-foxgeeks.png" alt="Comprar os principais jogos da atualidade e sair na frente do seus amigos">
+                        <p>Comprar os principais <strong>jogos da atualidade</strong> e sair na frente do seus amigos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script File > MODAL REGISTER FOXGEEK -->
+    <script type="text/javascript" src="js/modal-register-foxgeek.js"></script>
+
+
+</body>
+</html>

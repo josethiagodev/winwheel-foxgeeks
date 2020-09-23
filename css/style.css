@@ -1,0 +1,185 @@
+/* GOOGLE FONTS > font-family: 'Montserrat', sans-serif; font-family: 'Open Sans', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap');
+
+
+/* RESET CSS */
+*,
+*::after,
+*::before { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { box-sizing: border-box; margin: 0; padding: 0; }
+button, input { box-sizing: border-box; border: 0; outline: none; }
+article, section, aside, nav { box-sizing: border-box; margin: 0; padding: 0; }
+p, h1 { box-sizing: border-box; margin: 0; padding: 0; }
+
+
+/* Button Register */
+.btn-centralized-register { 
+    display: flex; justify-content: center; align-items: center; width: 100%; height: 100vh; overflow: hidden;
+    background: rgb(239,83,0);
+    background: -moz-linear-gradient(180deg, rgba(239,83,0,1) 0%, rgba(229,51,42,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(239,83,0,1) 0%, rgba(229,51,42,1) 100%);
+    background: linear-gradient(180deg, rgba(239,83,0,1) 0%, rgba(229,51,42,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ef5300",endColorstr="#e5332a",GradientType=1);
+}
+.btn-centralized-register .btn-modal-register { display: inline-block; cursor: pointer; width: auto; height: auto; overflow: hidden; padding: 10px 30px; border-radius: 35px; text-align: center; text-transform: uppercase; color: #ca2800; font-family: 'Open Sans', sans-serif; font-size: 1rem; font-weight: 700; }
+
+
+/* Modal Register */
+.modal-foxgeek-register { display: none; visibility: hidden; opacity: 0; position: fixed; z-index: 9999; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100vh; overflow: hidden; margin: 0; padding: 0; }
+.modal-foxgeek-register.showModalRegister { display: block; visibility: visible; opacity: 1; }
+.modal-foxgeek-register .modal-centralized-overlay { position: absolute; z-index: 1; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100vh; overflow: hidden; background-color: rgba(0,0,0,.5); }
+.modal-foxgeek-register .modal-container-foxgeek { box-sizing: border-box; position: fixed; z-index: 9999; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 850px; height: auto; overflow: hidden; margin: 0; padding: 0; background-color: #FFFFFF; border-radius: 12px; box-shadow: 0 6px 12px 0 rgba(0,0,0,0.15), 0 6px 12px 0 rgba(0,0,0,0.15); animation: modalRegister .5s ease; }
+@keyframes modalRegister {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.modal-foxgeek-register .modal-container-foxgeek .modal-header {
+    position: relative; width: 100%; height: auto; overflow: hidden; padding: 30px 0; border-radius: 8px 8px 0 0; text-align: center;
+    background: rgb(229,51,42);
+    background: -moz-linear-gradient(180deg, rgba(229,51,42,1) 0%, rgba(239,83,0,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(229,51,42,1) 0%, rgba(239,83,0,1) 100%);
+    background: linear-gradient(180deg, rgba(229,51,42,1) 0%, rgba(239,83,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e5332a",endColorstr="#ef5300",GradientType=1);  
+}
+.modal-foxgeek-register .modal-container-foxgeek .modal-header .header-title { position: relative; display: block; width: auto; height: auto; overflow: hidden; margin: 0 auto; padding: 0; line-height: 1.15; font-family: 'Montserrat', sans-serif; font-size: 2.3rem; color: #FFFFFF; font-weight: 400; }
+.modal-foxgeek-register .modal-container-foxgeek .modal-header .btn-close-modal { cursor: pointer; opacity: 0.6; position: absolute; z-index: 99; top: 18px; right: 18px; width: auto; height: auto; overflow: hidden; background: transparent; }
+.modal-foxgeek-register .modal-container-foxgeek .modal-body { 
+    width: 100%; height: auto; overflow: hidden; padding: 35px 0;
+    background: url(../img/roleta-goxgeeks-left.png) top left,
+              url(../img/roleta-goxgeeks-right.png) top right;
+    background-repeat: no-repeat;
+    background-size: 14%;
+    background-position-y: 25px;
+}
+.modal-foxgeek-register .modal-container-foxgeek .modal-body .form-group { display: block; width: 100%; height: auto; text-align: center; }
+.modal-foxgeek-register .modal-container-foxgeek .modal-body .form-group form { width: 100%; height: auto; }
+.modal-foxgeek-register .modal-container-foxgeek .modal-body .form-group p { display: block; width: 100%; height: auto; overflow: hidden; font-family: 'Open Sans', sans-serif; font-size: 1.25rem; font-weight: 500; line-height: 1.35; color: #212121; }
+.modal-foxgeek-register .modal-container-foxgeek .modal-body .form-group .form-control { display: block; width: 380px; height: 45px; line-height: 45px; overflow: hidden; margin: 20px auto; padding: 0; font-family: 'Open Sans', sans-serif; font-size: 1.1rem; font-weight: 500; line-height: 1.35; color: #ef5300; border-radius: 35px; border: 1px solid #ef5300; text-align: center; background-color: #f4f4f4; }
+.modal-foxgeek-register .modal-container-foxgeek .modal-body .form-group .form-control::placeholder { color: #ef5300; font-weight: 600; }
+.modal-foxgeek-register .modal-container-foxgeek .modal-body .form-group .btn-register { 
+    display: block; cursor: pointer; transition: background-color 0.2s ease; display: block; width: 270px; height: auto; margin: 0 auto; padding: 8px 0; font-family: 'Open Sans', sans-serif; font-size: 1.1rem; font-weight: 700; line-height: 1.35; color: #FFFFFF; border-radius: 35px; text-transform: uppercase; text-align: center; background-color: #ef5300; letter-spacing: 1px; border: 1px inset #ca2800;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.07), 0 0px 20px rgba(0, 0, 0, 0.07), 0 0px 20px rgba(0, 0, 0, 0.07); }
+.modal-foxgeek-register .modal-container-foxgeek .modal-body .form-group .btn-register:hover,
+.modal-foxgeek-register .modal-container-foxgeek .modal-body .form-group .btn-register:active, 
+.modal-foxgeek-register .modal-container-foxgeek .modal-body .form-group .btn-register:focus { background-color: #ca2800; border: 1px inset #ef5300; }
+.modal-foxgeek-register .modal-container-foxgeek .modal-body .about-foxgaming { width: 100%; height: auto; overflow: hidden; text-align: center; padding: 0 25px; margin: 30px 0 0 0; }
+.modal-foxgeek-register .modal-container-foxgeek .modal-body .about-foxgaming p { width: 100%; height: auto; overflow: hidden; margin: 0 0 15px 0; padding: 0; color: #212121; font-family: 'Open Sans', sans-serif; font-size: 1.2rem; font-weight: 600; line-height: 1.35; }
+.modal-foxgeek-register .modal-container-foxgeek .modal-body .about-foxgaming .column-03 { float: left; width: 33.3333%; height: auto; overflow: hidden; text-align: center; margin: 0; padding: 0 15px; }
+.modal-foxgeek-register .modal-container-foxgeek .modal-body .about-foxgaming .column-03 img { border: 0; display: inline-block; }
+.modal-foxgeek-register .modal-container-foxgeek .modal-body .about-foxgaming .column-03 p { width: 100%; height: auto; overflow: hidden; margin: 8px 0 0 0; padding: 0; color: #212121; font-family: 'Open Sans', sans-serif; font-size: 1rem; font-weight: 600; line-height: 1.35; }
+
+
+/* quero-jogar.html */
+.header-foxgeek { z-index: 3; position: fixed; top: 0; left: 0; right: 0; display: flex; flex-direction: column-reverse; align-items: center; width: 100%; height: auto; overflow: hidden; margin: 0; padding: 12px 20px; background-color: #141414; }
+.header-foxgeek .container-foxgeek { display: flex; position: relative; width: 100%; height: auto; overflow: hidden; margin: 0; padding: 0; }
+.menu-main { cursor: pointer; z-index: 99999; position: fixed; left: 20px; top: 25px; width: 45px; height: 45px; overflow: hidden; margin: 0; padding: 0; background-image: url("../img/icone-menu.png"); background-repeat: no-repeat; background-position: center center; background-size: 100% 100%; }
+.header-foxgeek .container-foxgeek .column-discount { width: 245px; height: auto; overflow: hidden; margin: 0 auto; padding: 0; text-align: center; }
+.header-foxgeek .container-foxgeek .column-discount .txt-discount { width: 100%; height: auto; overflow: hidden; margin: 0; padding: 0; color: #FFFFFF; font-family: 'Open Sans', sans-serif; font-size: 0.85rem; font-weight: 400; line-height: 1.3; }
+.header-foxgeek .container-foxgeek .column-discount .image-discount { width: 245px; height: 50px; overflow: hidden; margin: 0 0 5px 0; padding: 0; background-image: url("../img/valor-desconto.png"); background-repeat: no-repeat; background-position: center center; background-size: 100% 100%; }
+.header-foxgeek .container-foxgeek .column-discount .center-discount { display: inline-block; width: auto; height: auto;overflow: hidden; margin: 11px auto 10px auto; padding: 0; }
+.header-foxgeek .container-foxgeek .column-discount .center-discount .icone-desconto { margin-right: 4px; }
+.header-foxgeek .container-foxgeek .column-discount .center-discount .value-discount { display: inline-block; width: auto; height: auto; line-height: auto; overflow: hidden; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; font-size: 1.1rem; font-weight: 800; color: #FFFFFF; text-transform: uppercase; }
+.header-foxgeek .container-foxgeek .menu-sair { transition: 0.3s ease; opacity: 1; cursor: pointer; position: absolute; right: 0; top: 14px; width: auto; height: auto; overflow: hidden; margin: 0; padding: 0; }
+.header-foxgeek .container-foxgeek .menu-sair:hover,
+.header-foxgeek .container-foxgeek .menu-sair:active,
+.header-foxgeek .container-foxgeek .menu-sair:focus { opacity: 0.8; }
+.page-content { max-width: 650px; height: auto; overflow: hidden; margin: 0 auto; padding: 20px 0 0 0; }
+.page-content.margin-size { margin-top: 130px; }
+.page-content .column-left { position: relative; float: left; width: 425px; height: auto; margin: 0; padding: 0; }
+.page-content .column-left .arrow-foxgeeks { width: auto; height: auto; overflow: hidden; margin: 0; padding: 0; z-index: 1; position: absolute; top: -14px; left: 41%; }
+.page-content .column-left .bg-roullete { position: relative; width: 425px; height: 525px; overflow: hidden; margin: 0; padding: 0; background-image: url("../img/background-roulette.png"); background-repeat: no-repeat; background-position: top center; background-size: 100% 100%; }
+#winWheelFoxGeeks { position: relative; display: block; margin: 36px auto 0 auto; padding: 0; }
+.page-content .column-right { text-align: center; display: flex; align-items: center; float: right; width: auto; height: 525px; overflow: hidden; margin: 0; padding: 0; }
+.page-content .column-right .btn-start { 
+    display: flex; cursor: pointer; width: auto; height: auto; overflow: hidden; margin: 0; padding: 12px 25px; text-align: center; font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 800; color: #FFFFFF; text-transform: uppercase; border-radius: 6px;
+    background: rgb(255,151,0);
+    background: -moz-linear-gradient(top,  rgb(255,151,0) 0%, rgb(255,204,0) 99%);
+    background: -webkit-linear-gradient(top,  rgb(255,151,0) 0%,rgb(255,204,0) 99%);
+    background: linear-gradient(to bottom,  rgb(255,151,0) 0%,rgb(255,204,0) 99%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9700', endColorstr='#ffcc00',GradientType=0 );
+}
+.page-content .column-right .btn-start:hover,
+.page-content .column-right .btn-start:active,
+.page-content .column-right .btn-start:focus {
+    background: rgb(255,204,0);
+    background: -moz-linear-gradient(top,  rgb(255,204,0) 68%, rgb(255,151,0) 100%);
+    background: -webkit-linear-gradient(top,  rgb(255,204,0) 68%,rgb(255,151,0) 100%);
+    background: linear-gradient(to bottom,  rgb(255,204,0) 68%,rgb(255,151,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffcc00', endColorstr='#ff9700',GradientType=0 );
+}
+/* MENU MAIN > quero-jogar.html */
+.open-menu-main { display: none; opacity: 0; position: fixed; z-index: 7777; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100vh; overflow: hidden; margin: 0; padding: 0; }
+.open-menu-main.showMenuMain { display: block; opacity: 1; transition: opacity 1s ease; }
+.overlay-menu-main { z-index: 8888; position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100vh; overflow: hidden; margin: 0; padding: 0; background-color: rgba(0,0,0,.5); }
+.navbar-menu-main { 
+    z-index: 9999; position: fixed; top: 0; left: 0; width: 380px; height: 100vh; overflow: hidden; margin: 0; padding: 0; border-radius: 0 12px 12px 0; animation: AnimaMenuMain .5s ease;
+    background: rgb(229,51,42);
+    background: -moz-linear-gradient(0deg, rgba(229,51,42,1) 0%, rgba(239,83,0,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(229,51,42,1) 0%, rgba(239,83,0,1) 100%);
+    background: linear-gradient(0deg, rgba(229,51,42,1) 0%, rgba(239,83,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e5332a",endColorstr="#ef5300",GradientType=1);  
+}
+@keyframes AnimaMenuMain {
+    from { opacity: 0; left: -380px; }
+    to { opacity: 1; left: 0; }
+}
+.navbar-menu-main ul.list-menu { width: 100%; height: auto; overflow: hidden; margin: 100px 0 0 0; padding: 0 30px; }
+.navbar-menu-main ul.list-menu li { display: inline-block; list-style: none; list-style-type: none; width: 100%; height: auto; overflow: hidden; margin: 0; padding: 0; border-bottom: 1px solid rgb(255,204,0); }
+.navbar-menu-main ul.list-menu li a { display: block; width: 100%; height: auto; overflow: hidden; margin: 0; padding: 15px 0; text-decoration: none; color: rgb(255,204,0); font-family: 'Montserrat', sans-serif; font-size: 1.1rem; font-weight: 600; }
+.navbar-menu-main ul.list-menu li a:hover { color: #FFFFFF; }
+.navbar-menu-main ul.list-menu li i { margin-right: 10px; }
+
+
+
+
+/* RESPONSIVE CSS */
+@media (max-width: 860px) {
+    .modal-foxgeek-register .modal-container-foxgeek { width: 94%; }
+    .modal-foxgeek-register .modal-container-foxgeek .modal-header .header-title { font-size: 2rem; }
+    .modal-foxgeek-register .modal-container-foxgeek .modal-body .about-foxgaming { padding: 0 15px; }
+    .modal-foxgeek-register .modal-container-foxgeek .modal-body .about-foxgaming .column-03 { padding: 0 10px; }
+    .modal-foxgeek-register .modal-container-foxgeek .modal-body .about-foxgaming .column-03 p { font-size: 0.9rem; }
+}
+
+@media (max-width: 660px) {
+    .modal-foxgeek-register .modal-container-foxgeek { height: 95%; overflow-y: auto; }
+    .modal-foxgeek-register .modal-container-foxgeek .modal-body { background: none !important; }
+    .page-content { padding-top: 15px; }
+    .page-content.margin-size { margin-bottom: 110px; }
+    .page-content .column-left { float: none; margin: 0 auto; }
+    .page-content .column-right {
+        z-index: 1; position: fixed; left: 0; bottom: 0; right: 0; width: 100%; padding: 15px 15px; text-align: center; height: auto; background-color: #FFFFFF;
+        -webkit-box-shadow: 10px 10px 10px 6px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 10px 10px 10px 6px rgba(0, 0, 0, 0.5);
+        box-shadow: 10px 10px 10px 6px rgba(0, 0, 0, 0.5);
+    }
+    .page-content .column-right .btn-start { width: 100%; text-align: center; display: block; margin: 0 auto; }
+}
+
+@media (max-width: 590px) {
+    .modal-foxgeek-register .modal-container-foxgeek .modal-header { padding: 20px 0; }
+    .modal-foxgeek-register .modal-container-foxgeek .modal-header .header-title { font-size: 1.6rem; }
+    .modal-foxgeek-register .modal-container-foxgeek .modal-body { padding: 25px 0; }
+    .modal-foxgeek-register .modal-container-foxgeek .modal-body .form-group p { font-size: 1.1rem; }
+    .modal-foxgeek-register .modal-container-foxgeek .modal-body .about-foxgaming { max-width: 450px; margin: 35px auto 0 auto; }
+    .modal-foxgeek-register .modal-container-foxgeek .modal-body .about-foxgaming .column-03 { width: 100%; margin-bottom: 20px; }
+    .modal-foxgeek-register .modal-container-foxgeek .modal-body .about-foxgaming .column-03:last-child { margin-bottom: 0; }
+}
+
+@media (max-width: 460px) {
+    .page-content .column-left { width: 100%; }
+    .page-content .column-left .bg-roullete { width: 345px; height: 435px; margin: 0 auto; }
+    #winWheelFoxGeeks { width: 290px; margin-top: 32px; }
+    .modal-foxgeek-register .modal-container-foxgeek .modal-header .header-title { font-size: 1.35rem; padding: 0 15px; }
+    .modal-foxgeek-register .modal-container-foxgeek .modal-body .form-group p { font-size: 0.95rem; }
+    .modal-foxgeek-register .modal-container-foxgeek .modal-body .form-group .form-control { width: 90%; }
+    .modal-foxgeek-register .modal-container-foxgeek .modal-body .about-foxgaming { max-width: 100%; }
+    .modal-foxgeek-register .modal-container-foxgeek .modal-body .about-foxgaming p { font-size: 1.1rem; }
+}
+
+@media (max-width: 360px) {
+    .page-content .column-left .bg-roullete { width: 286px; height: 360px; margin: 0 auto; }
+    #winWheelFoxGeeks { width: 240px; margin-top: 26px; }
+    .modal-foxgeek-register .modal-container-foxgeek .modal-body .about-foxgaming p { font-size: 0.9rem; }
+
+}
